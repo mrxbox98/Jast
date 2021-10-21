@@ -127,7 +127,7 @@ public class JastTest<E> {
                         if(print)
                         {
                             System.out.println("\u001b[1m \u001b[30m\u001b[41;1m FAIL \u001b[0m");
-                            System.out.println("\u001b[1m \u001b[31m❌ \u001b[37;1m Took too long ("+diff+"ms)");
+                            fail("Took too long (\"+diff+\"ms)");
                             printMethod();
                         }
                         return false;
@@ -137,7 +137,7 @@ public class JastTest<E> {
                     {
 
                         printPass();
-                        System.out.println(" ✓ Expected "+ Arrays.toString(expected) + " and got "+ ret);
+                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret);
                         System.out.println(time);
                         printMethod();
                     }
@@ -198,6 +198,24 @@ public class JastTest<E> {
         System.out.println(method.getName());
         System.out.println(name);
         System.out.println(description);
+    }
+
+    /**
+     * Prints a fail message with color coding
+     * @param message message to print
+     */
+    public void fail(String message)
+    {
+        System.out.println("\u001b[1m \u001b[31m❌ \u001b[37;1m " + message);
+    }
+
+    /**
+     * Prints a pass message
+     * @param message message to print
+     */
+    public void pass(String message)
+    {
+        System.out.println("\u001b[1m \u001b[32;1m✓ \u001b[37;1m " + message);
     }
 
 }
