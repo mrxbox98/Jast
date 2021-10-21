@@ -6,6 +6,25 @@ import java.util.Arrays;
 
 public class JastTest<E> {
 
+    public static void main(String[] args)
+    {
+        JastTest<String> jastTest = new JastTest<>();
+        try {
+            jastTest.setMethod(JastTest.class.getMethod("testString"));
+            jastTest.setExpected("test");
+            jastTest.setName("TestName");
+            jastTest.setDescription("TestDescription");
+            jastTest.test();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String testString()
+    {
+        return "test";
+    }
+
     Method method;
 
     E[] expected;
@@ -23,7 +42,7 @@ public class JastTest<E> {
 
     }
 
-    public JastTest<E> setExpected(E[] expected)
+    public JastTest<E> setExpected(E... expected)
     {
         this.expected=expected;
         return this;
@@ -41,7 +60,7 @@ public class JastTest<E> {
         return this;
     }
 
-    public JastTest<E> setParameters(Object[] params)
+    public JastTest<E> setParameters(Object... params)
     {
         this.parameters=params;
         return this;
@@ -84,7 +103,7 @@ public class JastTest<E> {
                 {
                     if(print)
                     {
-                        System.out.println("\u001b[42;1m PASS");
+                        System.out.println("\u001b[30m\u001b[42;1m PASS");
                         printMethod();
                     }
                     return true;
@@ -92,7 +111,7 @@ public class JastTest<E> {
             }
             if(print)
             {
-                System.out.println("\u001b[41;1m FAIL");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL");
                 System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
                 printMethod();
             }
