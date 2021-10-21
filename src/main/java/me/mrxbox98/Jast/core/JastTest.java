@@ -14,6 +14,7 @@ public class JastTest<E> {
             jastTest.setExpected("test");
             jastTest.setName("TestName");
             jastTest.setDescription("TestDescription");
+            jastTest.setTime(0);
             jastTest.test();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -22,6 +23,11 @@ public class JastTest<E> {
 
     public static String testString()
     {
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "test";
     }
 
@@ -36,6 +42,8 @@ public class JastTest<E> {
     Object caller;
 
     String name;
+
+    long time;
 
     public JastTest()
     {
@@ -78,6 +86,12 @@ public class JastTest<E> {
         return this;
     }
 
+    public JastTest<E> setTime(long time)
+    {
+        this.time=time;
+        return this;
+    }
+
     /**
      * Tests the method
      * @return true if the method works and false otherwise
@@ -95,15 +109,35 @@ public class JastTest<E> {
     public boolean test(boolean print)
     {
         try {
+            long currentTIme = System.currentTimeMillis();
+
             Object ret = method.invoke(caller, parameters);
+
+            long afterTime = System.currentTimeMillis();
+
+            long diff = afterTime-currentTIme;
 
             for(E e: expected)
             {
                 if(e.equals(ret))
                 {
+                    if(diff>time)
+                    {
+                        if(print)
+                        {
+                            System.out.println("\u001b[30m\u001b[41;1m FAIL");
+                            System.out.println("Took too long");
+                            System.out.println(diff);
+                            printMethod();
+                        }
+                        return false;
+                    }
+
                     if(print)
                     {
+
                         System.out.println("\u001b[30m\u001b[42;1m PASS");
+                        System.out.println(time);
                         printMethod();
                     }
                     return true;
@@ -119,16 +153,16 @@ public class JastTest<E> {
         } catch (IllegalAccessException e) {
             if(print)
             {
-                System.out.println("\u001b[41;1m FAIL");
-                System.out.println("\u001b[41;1m NOT ABLE TO ACCESS METHOD");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL");
+                System.out.println("\u001b[30m\u001b[41;1m NOT ABLE TO ACCESS METHOD");
                 printMethod();
                 return false;
             }
         } catch (InvocationTargetException e) {
             if(print)
             {
-                System.out.println("\u001b[41;1m FAIL");
-                System.out.println("\u001b[41;1m NOT ABLE TO ACCESS METHOD");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL");
+                System.out.println("\u001b[30m\u001b[41;1m INCORRECT METHOD");
                 printMethod();
                 return false;
             }
