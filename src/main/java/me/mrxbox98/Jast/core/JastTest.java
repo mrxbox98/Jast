@@ -2,6 +2,7 @@ package me.mrxbox98.Jast.core;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class JastTest<E> {
 
@@ -58,6 +59,10 @@ public class JastTest<E> {
         return this;
     }
 
+    /**
+     * Tests the method
+     * @return true if the method works and false otherwise
+     */
     public boolean test()
     {
         return test(true);
@@ -87,6 +92,7 @@ public class JastTest<E> {
             if(print)
             {
                 System.out.println("\u001b[41;1m FAIL");
+                System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
             }
             return false;
         } catch (IllegalAccessException e) {
@@ -105,6 +111,13 @@ public class JastTest<E> {
             }
         }
         return false;
+    }
+
+    public void printMethod()
+    {
+        System.out.println(method.getName());
+        System.out.println(name);
+        System.out.println(description);
     }
 
 }
