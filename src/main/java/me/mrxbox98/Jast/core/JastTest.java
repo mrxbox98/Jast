@@ -85,6 +85,7 @@ public class JastTest<E> {
                     if(print)
                     {
                         System.out.println("\u001b[42;1m PASS");
+                        printMethod();
                     }
                     return true;
                 }
@@ -93,6 +94,7 @@ public class JastTest<E> {
             {
                 System.out.println("\u001b[41;1m FAIL");
                 System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
+                printMethod();
             }
             return false;
         } catch (IllegalAccessException e) {
@@ -100,6 +102,7 @@ public class JastTest<E> {
             {
                 System.out.println("\u001b[41;1m FAIL");
                 System.out.println("\u001b[41;1m NOT ABLE TO ACCESS METHOD");
+                printMethod();
                 return false;
             }
         } catch (InvocationTargetException e) {
@@ -107,6 +110,7 @@ public class JastTest<E> {
             {
                 System.out.println("\u001b[41;1m FAIL");
                 System.out.println("\u001b[41;1m NOT ABLE TO ACCESS METHOD");
+                printMethod();
                 return false;
             }
         }
