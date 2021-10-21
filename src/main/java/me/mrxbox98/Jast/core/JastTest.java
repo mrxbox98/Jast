@@ -3,6 +3,7 @@ package me.mrxbox98.Jast.core;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class JastTest<E> {
 
@@ -135,7 +136,8 @@ public class JastTest<E> {
                     if(print)
                     {
 
-                        System.out.println("\u001b[30m\u001b[42;1m PASS");
+                        printPass();
+                        System.out.println(" ✓ Expected "+ Arrays.toString(expected) + " and got "+ ret);
                         System.out.println(time);
                         printMethod();
                     }
@@ -144,7 +146,7 @@ public class JastTest<E> {
             }
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                printFail();
                 System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
                 printMethod();
             }
@@ -152,7 +154,7 @@ public class JastTest<E> {
         } catch (IllegalAccessException e) {
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                printFail();
                 System.out.println("\u001b[31m❌ \u001b[30m NOT ABLE TO ACCESS METHOD");
                 printMethod();
                 return false;
@@ -160,13 +162,35 @@ public class JastTest<E> {
         } catch (InvocationTargetException e) {
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                printFail();
                 System.out.println("\u001b[31m❌ \u001b[30m INCORRECT METHOD");
                 printMethod();
                 return false;
             }
         }
         return false;
+    }
+
+    /**
+     * Prints fail
+     * BOLD
+     * BLACK
+     * BRIGHT RED BG
+     */
+    public void printFail()
+    {
+        System.out.println("\u001b[1m\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+    }
+
+    /**
+     * Prints fail
+     * BOLD
+     * BLACK
+     * BRIGHT GREEN BG
+     */
+    public void printPass()
+    {
+        System.out.println("\u001b[1m\u001b[30m\u001b[42;1m PASS \u001b[0m");
     }
 
     public void printMethod()
