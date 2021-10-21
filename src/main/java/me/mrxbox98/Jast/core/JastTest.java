@@ -3,8 +3,11 @@ package me.mrxbox98.Jast.core;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import java.util.HashMap;
 
+/**
+ * JastTest
+ * @param <E> Return type
+ */
 public class JastTest<E> {
 
     public static void main(String[] args)
@@ -12,10 +15,10 @@ public class JastTest<E> {
         JastTest<String> jastTest = new JastTest<>();
         try {
             jastTest.setMethod(JastTest.class.getMethod("testString"));
-            jastTest.setExpected("test");
+            jastTest.setExpected("tet","test");
             jastTest.setName("TestName");
             jastTest.setDescription("TestDescription");
-            jastTest.setTime(0);
+            jastTest.setTime(50);
             jastTest.test();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -126,8 +129,8 @@ public class JastTest<E> {
                     {
                         if(print)
                         {
-                            System.out.println("\u001b[1m \u001b[30m\u001b[41;1m FAIL \u001b[0m");
-                            fail("Took too long (\"+diff+\"ms)");
+                            printFail();
+                            fail("Took too long ("+diff+"ms)");
                             printMethod();
                         }
                         return false;
@@ -137,8 +140,7 @@ public class JastTest<E> {
                     {
 
                         printPass();
-                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret);
-                        System.out.println(time);
+                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+time+"ms)");
                         printMethod();
                     }
                     return true;
@@ -147,7 +149,7 @@ public class JastTest<E> {
             if(print)
             {
                 printFail();
-                System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
+                fail("Got "+ret+" but expected "+ Arrays.toString(expected));
                 printMethod();
             }
             return false;
@@ -155,7 +157,7 @@ public class JastTest<E> {
             if(print)
             {
                 printFail();
-                System.out.println("\u001b[31m❌ \u001b[30m NOT ABLE TO ACCESS METHOD");
+                fail("NOT ABLE TO ACCESS METHOD");
                 printMethod();
                 return false;
             }
@@ -163,7 +165,7 @@ public class JastTest<E> {
             if(print)
             {
                 printFail();
-                System.out.println("\u001b[31m❌ \u001b[30m INCORRECT METHOD");
+                fail("INCORRECT METHOD");
                 printMethod();
                 return false;
             }
