@@ -125,9 +125,8 @@ public class JastTest<E> {
                     {
                         if(print)
                         {
-                            System.out.println("\u001b[30m\u001b[41;1m FAIL");
-                            System.out.println("Took too long");
-                            System.out.println(diff);
+                            System.out.println("\u001b[1m \u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                            System.out.println("\u001b[1m \u001b[31m❌ \u001b[37;1m Took too long ("+diff+"ms)");
                             printMethod();
                         }
                         return false;
@@ -145,7 +144,7 @@ public class JastTest<E> {
             }
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
                 System.out.println("Got "+ret+" but expected "+ Arrays.toString(expected));
                 printMethod();
             }
@@ -153,16 +152,16 @@ public class JastTest<E> {
         } catch (IllegalAccessException e) {
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL");
-                System.out.println("\u001b[30m\u001b[41;1m NOT ABLE TO ACCESS METHOD");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                System.out.println("\u001b[31m❌ \u001b[30m NOT ABLE TO ACCESS METHOD");
                 printMethod();
                 return false;
             }
         } catch (InvocationTargetException e) {
             if(print)
             {
-                System.out.println("\u001b[30m\u001b[41;1m FAIL");
-                System.out.println("\u001b[30m\u001b[41;1m INCORRECT METHOD");
+                System.out.println("\u001b[30m\u001b[41;1m FAIL \u001b[0m");
+                System.out.println("\u001b[31m❌ \u001b[30m INCORRECT METHOD");
                 printMethod();
                 return false;
             }
