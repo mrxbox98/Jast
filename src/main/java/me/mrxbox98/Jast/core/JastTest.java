@@ -121,6 +121,18 @@ public class JastTest<E> {
 
             long diff = afterTime-currentTIme;
 
+            if(ret==null && expected.length==0)
+            {
+                if(print)
+                {
+
+                    printPass();
+                    pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+diff+"ms)");
+                    printMethod();
+                }
+                return true;
+            }
+
             for(E e: expected)
             {
                 if(e.equals(ret))
@@ -153,7 +165,9 @@ public class JastTest<E> {
                 printMethod();
             }
             return false;
-        } catch (IllegalAccessException e) {
+        }
+        catch (IllegalAccessException e)
+        {
             if(print)
             {
                 printFail();
@@ -161,7 +175,9 @@ public class JastTest<E> {
                 printMethod();
                 return false;
             }
-        } catch (InvocationTargetException e) {
+        }
+        catch (InvocationTargetException e)
+        {
             if(print)
             {
                 printFail();
@@ -170,6 +186,17 @@ public class JastTest<E> {
                 return false;
             }
         }
+        catch (NullPointerException e)
+        {
+            if(print)
+            {
+                printFail();
+                fail("NULL POINTER ERROR");
+                printMethod();
+                return false;
+            }
+        }
+
         return false;
     }
 
@@ -217,7 +244,7 @@ public class JastTest<E> {
      */
     public static void pass(String message)
     {
-        System.out.println("\u001b[1m \u001b[32;1m✓ \u001b[37;1m " + message);
+        System.out.println("\u001b[1m \u001b[32;1m✔ \u001b[37;1m " + message);
     }
 
 }

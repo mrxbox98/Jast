@@ -15,6 +15,18 @@ public class ByteTest {
             byteTest1.setExpected((byte) 1);
             byteMassTest.add(byteTest1);
 
+            JastTest<Byte> byteTest2 = new JastTest<>();
+            byteTest2.setMethod(ByteTest.class.getMethod("byteTest2"));
+            byteTest2.setExpected((byte) 2);
+            byteMassTest.add(byteTest2);
+
+            JastTest<Byte> byteTest3 = new JastTest<>();
+            byteTest3.setMethod(ByteTest.class.getMethod("byteTest3"));
+            byteTest3.setExpected();
+            byteMassTest.add(byteTest3);
+
+
+
             byteMassTest.test(true);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -24,6 +36,16 @@ public class ByteTest {
     public static Byte byteTest1()
     {
         return 1;
+    }
+
+    public static Byte byteTest2()
+    {
+        return 2;
+    }
+
+    public static Byte byteTest3()
+    {
+        return null;
     }
 
 }
