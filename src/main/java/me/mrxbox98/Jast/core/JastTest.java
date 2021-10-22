@@ -140,7 +140,7 @@ public class JastTest<E> {
                     {
 
                         printPass();
-                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+time+"ms)");
+                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+diff+"ms)");
                         printMethod();
                     }
                     return true;
