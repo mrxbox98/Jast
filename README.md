@@ -29,3 +29,20 @@ public class Test {
 }
 ```
 ![image](https://user-images.githubusercontent.com/29240392/138388002-dd7d2d3d-e82f-419b-a635-c235c4869f53.png)
+
+## Chaining
+Jast supports chaining so you can write an entire test in one line.
+```java
+import me.mrxbox98.Jast.core.JastTest;
+
+public class Test {
+    public static void main(String[] args) {
+        //Creates a new test and sets both the method and expected values in one line
+        JastTest<String> jastTest = new JastTest<>().jastTest.setMethod(Test.class.getMethod("getString")).setExpected("tet","test");
+    }
+
+    public static String getString() {
+        return "test";
+    }
+}
+```
