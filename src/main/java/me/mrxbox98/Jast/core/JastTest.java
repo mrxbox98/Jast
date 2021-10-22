@@ -179,7 +179,7 @@ public class JastTest<E> {
      * BLACK
      * BRIGHT RED BG
      */
-    public void printFail()
+    public static void printFail()
     {
         System.out.println("\u001b[1m\u001b[30m\u001b[41;1m FAIL \u001b[0m");
     }
@@ -190,7 +190,7 @@ public class JastTest<E> {
      * BLACK
      * BRIGHT GREEN BG
      */
-    public void printPass()
+    public static void printPass()
     {
         System.out.println("\u001b[1m\u001b[30m\u001b[42;1m PASS \u001b[0m");
     }
@@ -206,7 +206,7 @@ public class JastTest<E> {
      * Prints a fail message with color coding
      * @param message message to print
      */
-    public void fail(String message)
+    public static void fail(String message)
     {
         System.out.println("\u001b[1m \u001b[31m❌ \u001b[37;1m " + message);
     }
@@ -215,7 +215,7 @@ public class JastTest<E> {
      * Prints a pass message
      * @param message message to print
      */
-    public void pass(String message)
+    public static void pass(String message)
     {
         System.out.println("\u001b[1m \u001b[32;1m✓ \u001b[37;1m " + message);
     }

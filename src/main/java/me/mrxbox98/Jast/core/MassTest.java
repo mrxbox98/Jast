@@ -12,6 +12,11 @@ public class MassTest<E> {
         Collections.addAll(tests, test);
     }
 
+    /**
+     * Prints the data
+     * @param print the data
+     * @return true if all the tests pass and false otherwise
+     */
     public boolean test(boolean print)
     {
         boolean res=true;
