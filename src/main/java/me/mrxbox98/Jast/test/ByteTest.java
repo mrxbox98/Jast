@@ -13,6 +13,9 @@ public class ByteTest {
             JastTest<Byte> byteTest1 = new JastTest<>();
             byteTest1.setMethod(ByteTest.class.getMethod("byteTest1"));
             byteTest1.setExpected((byte) 1);
+            byteMassTest.add(byteTest1);
+
+            byteMassTest.test(true);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }

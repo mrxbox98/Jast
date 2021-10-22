@@ -26,14 +26,14 @@ public class MassTest<E> {
             {
                 if(print)
                 {
-                    printPass(" ("+(i+1)+"/"+(tests.size()+1)+")");
+                    printPass(" ("+(i+1)+"/"+tests.size()+")");
                 }
             }
             else
             {
                 if(print)
                 {
-                    printFail(" ("+(i+1)+"/"+(tests.size()+1)+")");
+                    printFail(" ("+(i+1)+"/"+tests.size()+")");
                 }
                 res=false;
             }
