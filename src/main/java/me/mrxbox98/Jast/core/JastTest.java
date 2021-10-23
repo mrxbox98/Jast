@@ -10,31 +10,6 @@ import java.util.Arrays;
  */
 public class JastTest<E> {
 
-    public static void main(String[] args)
-    {
-        JastTest<String> jastTest = new JastTest<>();
-        try {
-            jastTest.setMethod(JastTest.class.getMethod("testString"));
-            jastTest.setExpected("tet","test");
-            jastTest.setName("TestName");
-            jastTest.setDescription("TestDescription");
-            jastTest.setTime(50);
-            jastTest.test();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static String testString()
-    {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "test";
-    }
-
     Method method;
 
     E[] expected;
@@ -49,29 +24,54 @@ public class JastTest<E> {
 
     long time;
 
+    boolean strictEquals;
+
+    /**
+     * Creats a new JastTest
+     */
     public JastTest()
     {
 
     }
 
+    /**
+     * Sets the expected values
+     * @param expected The expected values
+     * @return the current object for chaining
+     */
     public JastTest<E> setExpected(E... expected)
     {
         this.expected=expected;
         return this;
     }
 
+    /**
+     * Sets the description of the object
+     * @param description the description
+     * @return the current object for chaining
+     */
     public JastTest<E> setDescription(String description)
     {
         this.description=description;
         return this;
     }
 
+    /**
+     * Sets the test's name
+     * @param name the name of the test
+     * @return the current object for chaining
+     */
     public JastTest<E> setName(String name)
     {
         this.name=name;
         return this;
     }
 
+    /**
+     * Sets the parameters of the call
+     * @param params the parameters of the object call
+     * @return the current object for chaining
+     */
     public JastTest<E> setParameters(Object... params)
     {
         this.parameters=params;
@@ -93,6 +93,12 @@ public class JastTest<E> {
     public JastTest<E> setTime(long time)
     {
         this.time=time;
+        return this;
+    }
+
+    public JastTest<E> setStrictEquals(boolean strictEquals)
+    {
+        this.strictEquals=strictEquals;
         return this;
     }
 
@@ -135,7 +141,7 @@ public class JastTest<E> {
 
             for(E e: expected)
             {
-                if(e.equals(ret))
+                if((strictEquals && e==ret) || (!strictEquals && e.equals(ret)))
                 {
                     if(diff>time)
                     {
@@ -192,6 +198,26 @@ public class JastTest<E> {
             {
                 printFail();
                 fail("NULL POINTER ERROR");
+                printMethod();
+                return false;
+            }
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            if(print)
+            {
+                printFail();
+                fail("ARRAY OUT OF BOUNDS EXCEPTION");
+                printMethod();
+                return false;
+            }
+        }
+        catch (IllegalArgumentException e)
+        {
+            if(print)
+            {
+                printFail();
+                fail("ILLEGAL ARGUMENT EXCEPTION");
                 printMethod();
                 return false;
             }
