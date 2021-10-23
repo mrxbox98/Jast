@@ -25,7 +25,15 @@ public class ByteTest {
             byteTest3.setExpected();
             byteMassTest.add(byteTest3);
 
+            JastTest<Byte> byteTest4 = new JastTest<>();
+            byteTest4.setMethod(ByteTest.class.getMethod("byteTest4"));
+            byteTest4.setExpected();
+            byteMassTest.add(byteTest4);
 
+            JastTest<Byte> byteTest5 = new JastTest<>();
+            byteTest5.setMethod(ByteTest.class.getMethod("byteTest5"));
+            byteTest5.setExpected();
+            byteMassTest.add(byteTest5);
 
             byteMassTest.test(true);
         } catch (NoSuchMethodException e) {
@@ -48,6 +56,14 @@ public class ByteTest {
         return null;
     }
 
+    public static Byte byteTest4()
+    {
+        throw new ArrayIndexOutOfBoundsException();
+    }
 
+    public static Byte byteTest5()
+    {
+        throw new IllegalArgumentException();
+    }
 
 }
