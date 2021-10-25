@@ -3,11 +3,11 @@ package me.mrxbox98.Jast.core;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MassTest<E> {
+public class MassTest {
 
-    public ArrayList<JastTest<E>> tests = new ArrayList<>();
+    public ArrayList<JastTest> tests = new ArrayList<>();
 
-    public void add(JastTest<E>... test)
+    public void add(JastTest... test)
     {
         Collections.addAll(tests, test);
     }

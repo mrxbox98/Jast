@@ -7,7 +7,7 @@ public class ByteTest {
     public static void main(String[] args)
     {
         try {
-            MassTest<Byte> byteMassTest = new MassTest<>();
+            MassTest byteMassTest = new MassTest();
 
             JastTest<Byte> byteTest1 = new JastTest<>();
             byteTest1.setMethod(ByteTest.class.getMethod("byteTest1"));
@@ -24,14 +24,14 @@ public class ByteTest {
             byteTest3.setExpected();
             byteMassTest.add(byteTest3);
 
-            JastTest<Byte> byteTest4 = new JastTest<>();
+            JastTest<Exception> byteTest4 = new JastTest<>();
             byteTest4.setMethod(ByteTest.class.getMethod("byteTest4"));
-            byteTest4.setExpected();
+            byteTest4.setExpected(new ArrayIndexOutOfBoundsException());
             byteMassTest.add(byteTest4);
 
-            JastTest<Byte> byteTest5 = new JastTest<>();
+            JastTest<Exception> byteTest5 = new JastTest<>();
             byteTest5.setMethod(ByteTest.class.getMethod("byteTest5"));
-            byteTest5.setExpected();
+            byteTest5.setExpected(new IllegalArgumentException());
             byteMassTest.add(byteTest5);
 
             byteMassTest.test(true);

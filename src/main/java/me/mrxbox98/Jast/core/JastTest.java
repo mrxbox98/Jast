@@ -184,19 +184,9 @@ public class JastTest<E> {
         }
         catch (InvocationTargetException e)
         {
-            if(print)
-            {
-                printFail();
-                fail("INCORRECT METHOD");
-                printMethod();
-                return false;
-            }
-        }
-        catch (Exception e)
-        {
             for(E exception: expected)
             {
-                if(exception.getClass().equals(e.getClass()))
+                if(exception.getClass().equals(e.getCause().getClass()))
                 {
                     if(print)
                     {
@@ -213,6 +203,10 @@ public class JastTest<E> {
                 printMethod();
             }
             return false;
+        }
+        catch (Exception ignored)
+        {
+
         }
 
         return false;
