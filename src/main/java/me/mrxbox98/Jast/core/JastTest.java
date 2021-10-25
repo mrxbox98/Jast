@@ -192,35 +192,27 @@ public class JastTest<E> {
                 return false;
             }
         }
-        catch (NullPointerException e)
+        catch (Exception e)
         {
+            for(E exception: expected)
+            {
+                if(exception.getClass().equals(e.getClass()))
+                {
+                    if(print)
+                    {
+                        printPass();
+                        printMethod();
+                    }
+                    return true;
+                }
+            }
             if(print)
             {
                 printFail();
-                fail("NULL POINTER ERROR");
+                fail("UNEXPECTED ERROR");
                 printMethod();
-                return false;
             }
-        }
-        catch (ArrayIndexOutOfBoundsException e)
-        {
-            if(print)
-            {
-                printFail();
-                fail("ARRAY OUT OF BOUNDS EXCEPTION");
-                printMethod();
-                return false;
-            }
-        }
-        catch (IllegalArgumentException e)
-        {
-            if(print)
-            {
-                printFail();
-                fail("ILLEGAL ARGUMENT EXCEPTION");
-                printMethod();
-                return false;
-            }
+            return false;
         }
 
         return false;

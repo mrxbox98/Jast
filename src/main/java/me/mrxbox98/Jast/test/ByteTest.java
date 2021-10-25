@@ -4,7 +4,6 @@ import me.mrxbox98.Jast.core.JastTest;
 import me.mrxbox98.Jast.core.MassTest;
 
 public class ByteTest {
-
     public static void main(String[] args)
     {
         try {
