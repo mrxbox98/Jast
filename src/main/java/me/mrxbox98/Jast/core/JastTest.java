@@ -4,15 +4,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-/**
- * JastTest
- * @param <E> Return type
- */
-public class JastTest<E> {
+public class JastTest {
 
     Method method;
 
-    E[] expected;
+    Object[] expected;
 
     String description;
 
@@ -39,7 +35,7 @@ public class JastTest<E> {
      * @param expected The expected values
      * @return the current object for chaining
      */
-    public JastTest<E> setExpected(E... expected)
+    public JastTest setExpected(Object... expected)
     {
         this.expected=expected;
         return this;
@@ -50,7 +46,7 @@ public class JastTest<E> {
      * @param description the description
      * @return the current object for chaining
      */
-    public JastTest<E> setDescription(String description)
+    public JastTest setDescription(String description)
     {
         this.description=description;
         return this;
@@ -61,7 +57,7 @@ public class JastTest<E> {
      * @param name the name of the test
      * @return the current object for chaining
      */
-    public JastTest<E> setName(String name)
+    public JastTest setName(String name)
     {
         this.name=name;
         return this;
@@ -72,31 +68,31 @@ public class JastTest<E> {
      * @param params the parameters of the object call
      * @return the current object for chaining
      */
-    public JastTest<E> setParameters(Object... params)
+    public JastTest setParameters(Object... params)
     {
         this.parameters=params;
         return this;
     }
 
-    public JastTest<E> setCaller(Object caller)
+    public JastTest setCaller(Object caller)
     {
         this.caller=caller;
         return this;
     }
 
-    public JastTest<E> setMethod(Method method)
+    public JastTest setMethod(Method method)
     {
         this.method=method;
         return this;
     }
 
-    public JastTest<E> setTime(long time)
+    public JastTest setTime(long time)
     {
         this.time=time;
         return this;
     }
 
-    public JastTest<E> setStrictEquals(boolean strictEquals)
+    public JastTest setStrictEquals(boolean strictEquals)
     {
         this.strictEquals=strictEquals;
         return this;
@@ -139,7 +135,7 @@ public class JastTest<E> {
                 return true;
             }
 
-            for(E e: expected)
+            for(Object e: expected)
             {
                 if((strictEquals && e==ret) || (!strictEquals && e.equals(ret)))
                 {
@@ -184,7 +180,7 @@ public class JastTest<E> {
         }
         catch (InvocationTargetException e)
         {
-            for(E exception: expected)
+            for(Object exception: expected)
             {
                 if(exception.getClass().equals(e.getCause().getClass()))
                 {
