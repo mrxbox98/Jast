@@ -6,24 +6,48 @@ import java.util.Arrays;
 
 public class JastTest {
 
+    /**
+     * Method to call
+     */
     Method method;
 
+    /**
+     * Expected values
+     */
     Object[] expected;
 
+    /**
+     * Description of the test
+     */
     String description;
 
+    /**
+     * Parameters to call the method with
+     */
     Object[] parameters;
 
+    /**
+     * The caller of the method - Not required for static methods
+     */
     Object caller;
 
+    /**
+     * The name of the method
+     */
     String name;
 
+    /**
+     * How long the method should take
+     */
     long time;
 
+    /**
+     * Check for strictly equals instead of Object#equals(Object obj)
+     */
     boolean strictEquals;
 
     /**
-     * Creats a new JastTest
+     * Creates a new JastTest
      */
     public JastTest()
     {
