@@ -244,7 +244,7 @@ public class JastTest {
     }
 
     /**
-     * Prints fail
+     * Prints pass
      * BOLD
      * BLACK
      * BRIGHT GREEN BG
