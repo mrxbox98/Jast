@@ -66,7 +66,7 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <!-- Prevent gpg from using pinentry programs. Fixes: gpg: signing 
+                                    <!-- Prevent gpg from using pinentry programs. Fixes: gpg: signing
                                         failed: Inappropriate ioctl for device -->
                                     <gpgArguments>
                                         <arg>--pinentry-mode</arg>
@@ -103,4 +103,14 @@
         <url>https://github.com/mrxbox98/Jast/tree/main</url>
     </scm>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 </project>
