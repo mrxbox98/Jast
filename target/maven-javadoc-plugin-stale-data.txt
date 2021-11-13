@@ -1,0 +1,19 @@
+cmd.exe
+/X
+/C
+""C:\Program Files\Temurin\jdk-8.0.302.8-hotspot\jre\..\bin\javadoc.exe" @options @argfile"
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1636761969044
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1636761969046
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\argfile = 1636761968486
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1636761969013
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1636761969042
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1636761969052
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1636761969039
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1636761969047
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\options = 1636761968485
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1636761968994
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1636761969049
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1636761969033
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1636761968993
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1636761969055
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\stylesheet.css = 1636761969054

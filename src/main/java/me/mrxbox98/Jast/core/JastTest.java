@@ -267,7 +267,7 @@ public class JastTest {
      */
     public static void fail(String message)
     {
-        System.out.println("\u001b[1m \u001b[31m❌ \u001b[37;1m " + message);
+        System.out.println("\u001b[1m \u001b[31mX \u001b[37;1m " + message);
     }
 
     /**
@@ -276,7 +276,7 @@ public class JastTest {
      */
     public static void pass(String message)
     {
-        System.out.println("\u001b[1m \u001b[32;1m✔ \u001b[37;1m " + message);
+        System.out.println("\u001b[1m \u001b[32;1m√ \u001b[37;1m " + message);
     }
 
 }
