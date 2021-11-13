@@ -98,24 +98,44 @@ public class JastTest {
         return this;
     }
 
+    /**
+     * Sets the calling object of the
+     * @param caller of the method
+     * @return the current object for chaining
+     */
     public JastTest setCaller(Object caller)
     {
         this.caller=caller;
         return this;
     }
 
+    /**
+     * Sets the method to call
+     * @param method the method to call
+     * @return the current object for chaining
+     */
     public JastTest setMethod(Method method)
     {
         this.method=method;
         return this;
     }
 
+    /**
+     * Sets the time the method should take to complete
+     * @param time the time it should take
+     * @return the current object for chaining
+     */
     public JastTest setTime(long time)
     {
         this.time=time;
         return this;
     }
 
+    /**
+     * Sets whether the test should use == or .equals
+     * @param strictEquals whether the test should use == or .equals
+     * @return the current object for chaining
+     */
     public JastTest setStrictEquals(boolean strictEquals)
     {
         this.strictEquals=strictEquals;
