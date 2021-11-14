@@ -46,6 +46,7 @@ public class MassTest {
      * BOLD
      * BLACK
      * BRIGHT RED BG
+     * @param message the message to print
      */
     public void printFail(String message)
     {
@@ -57,6 +58,7 @@ public class MassTest {
      * BOLD
      * BLACK
      * BRIGHT GREEN BG
+     * @param message the message to print
      */
     public void printPass(String message)
     {
