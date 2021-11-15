@@ -1,5 +1,14 @@
 ![image](https://user-images.githubusercontent.com/29240392/138798545-210a25cb-ad78-41be-a0a3-e3086e1390eb.png) 
 # Jast
+
+***
+```xml
+<dependency>
+    <groupId>me.mrxbox98.Jast</groupId>
+    <artifactId>jast</artifactId>
+    <version>1.2.0</version>
+</dependency>
+```
 ***
 A fast testing utility for Java based off of Jest for Javascript
 
