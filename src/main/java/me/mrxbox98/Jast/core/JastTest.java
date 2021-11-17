@@ -173,7 +173,7 @@ public class JastTest {
                 {
 
                     printPass();
-                    pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+diff+"ms)");
+                    pass("Expected "+ Arrays.toString(expected) + " and got null ("+diff+"ms)");
                     printMethod();
                 }
                 return true;
