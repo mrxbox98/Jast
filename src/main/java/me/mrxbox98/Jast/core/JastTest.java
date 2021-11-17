@@ -159,13 +159,11 @@ public class JastTest {
     public boolean test(boolean print)
     {
         try {
-            long currentTIme = System.currentTimeMillis();
+            long currentTime = System.currentTimeMillis();
 
             Object ret = method.invoke(caller, parameters);
 
-            long afterTime = System.currentTimeMillis();
-
-            long diff = afterTime-currentTIme;
+            long diff = System.currentTimeMillis()-currentTime;
 
             if(ret==null && expected.length==0)
             {
