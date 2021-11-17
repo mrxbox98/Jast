@@ -207,7 +207,14 @@ public class JastTest {
             if(print)
             {
                 printFail();
-                fail("Got "+ret+" but expected "+ Arrays.toString(expected));
+                if(expected.length==0)
+                {
+                    fail("No expected values, but return type was not null");
+                }
+                else
+                {
+                    fail("Got "+ret+" but expected "+ Arrays.toString(expected));
+                }
                 printMethod();
             }
             return false;
