@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/29240392/138798545-210a25cb-ad78-41be-a0a3-e3086e1390eb.png) 
 # Jast
-[![Release](https://jitpack.io/v/me.mrxbox98/Jast.svg)]
-(https://jitpack.io/#me.mrxbox98/Jast)
+[![Release](https://jitpack.io/v/me.mrxbox98/Jast.svg)](https://jitpack.io/#me.mrxbox98/Jast)
+
 ***
 ```xml
 <depedencies>
