@@ -245,6 +245,10 @@ public class JastTest {
             {
                 printFail();
                 fail("UNEXPECTED ERROR");
+                for(int i=0;i<e.getCause().getStackTrace().length;i++)
+                {
+                   fail(e.getCause().getStackTrace()[i].toString());
+                }
                 printMethod();
             }
             return false;
