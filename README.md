@@ -8,7 +8,7 @@
     <dependency>
         <groupId>me.mrxbox98.Jast</groupId>
         <artifactId>jast</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.3</version>
     </dependency>
 </depedencies>
 ```
