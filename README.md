@@ -30,7 +30,7 @@ import me.mrxbox98.Jast.core.JastTest;
 public class Test {
     public static void main(String[] args) {
         //Creates a new test
-        JastTest<String> jastTest = new JastTest<>();
+        JastTest jastTest = new JastTest();
         //Use reflection to get the method to test
         jastTest.setMethod(Test.class.getMethod("getString"));
         //Unlimited number of expected values
@@ -60,7 +60,7 @@ import me.mrxbox98.Jast.core.JastTest;
 public class Test {
     public static void main(String[] args) {
         //Creates a new test and sets both the method and expected values in one line
-        JastTest<String> jastTest = new JastTest<>().jastTest.setMethod(Test.class.getMethod("getString")).setExpected("tet","test");
+        JastTest jastTest = new JastTest().jastTest.setMethod(Test.class.getMethod("getString")).setExpected("tet","test");
     }
 
     public static String getString() {
@@ -80,19 +80,19 @@ public class Test {
     public static void main(String[] args)
     {
         try {
-            MassTest<Byte> byteMassTest = new MassTest<>();
+            MassTest byteMassTest = new MassTest();
 
-            JastTest<Byte> byteTest1 = new JastTest<>();
+            JastTest byteTest1 = new JastTest();
             byteTest1.setMethod(Test.class.getMethod("byteTest1"));
             byteTest1.setExpected((byte) 1);
             byteMassTest.add(byteTest1);
 
-            JastTest<Byte> byteTest2 = new JastTest<>();
+            JastTest byteTest2 = new JastTest();
             byteTest2.setMethod(Test.class.getMethod("byteTest2"));
             byteTest2.setExpected((byte) 2);
             byteMassTest.add(byteTest2);
 
-            JastTest<Byte> byteTest3 = new JastTest<>();
+            JastTest byteTest3 = new JastTest();
             byteTest3.setMethod(Test.class.getMethod("byteTest3"));
             byteTest3.setExpected();
             byteMassTest.add(byteTest3);
@@ -135,27 +135,27 @@ public class ByteTest {
         try {
             MassTest byteMassTest = new MassTest();
 
-            JastTest<Byte> byteTest1 = new JastTest<>();
+            JastTest byteTest1 = new JastTest();
             byteTest1.setMethod(ByteTest.class.getMethod("byteTest1"));
             byteTest1.setExpected((byte) 1);
             byteMassTest.add(byteTest1);
 
-            JastTest<Byte> byteTest2 = new JastTest<>();
+            JastTest byteTest2 = new JastTest();
             byteTest2.setMethod(ByteTest.class.getMethod("byteTest2"));
             byteTest2.setExpected((byte) 2);
             byteMassTest.add(byteTest2);
 
-            JastTest<Byte> byteTest3 = new JastTest<>();
+            JastTest byteTest3 = new JastTest();
             byteTest3.setMethod(ByteTest.class.getMethod("byteTest3"));
             byteTest3.setExpected();
             byteMassTest.add(byteTest3);
 
-            JastTest<Exception> byteTest4 = new JastTest<>();
+            JastTest byteTest4 = new JastTest();
             byteTest4.setMethod(ByteTest.class.getMethod("byteTest4"));
             byteTest4.setExpected(new ArrayIndexOutOfBoundsException());
             byteMassTest.add(byteTest4);
 
-            JastTest<Exception> byteTest5 = new JastTest<>();
+            JastTest byteTest5 = new JastTest();
             byteTest5.setMethod(ByteTest.class.getMethod("byteTest5"));
             byteTest5.setExpected(new IllegalArgumentException());
             byteMassTest.add(byteTest5);

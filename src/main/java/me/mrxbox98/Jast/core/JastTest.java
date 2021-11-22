@@ -1,5 +1,7 @@
 package me.mrxbox98.Jast.core;
 
+import com.google.gson.Gson;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -306,6 +308,17 @@ public class JastTest {
     public static void pass(String message)
     {
         System.out.println("\u001b[1m \u001b[32;1m√ \u001b[37;1m " + message);
+    }
+
+    /**
+     * Converts this test into a string that can be read by FileLoad
+     * @see me.mrxbox98.Jast.file.FileLoad
+     * @return the JSON version of this test
+     */
+    @Override
+    public String toString()
+    {
+        return new Gson().toJson(this);
     }
 
 }
