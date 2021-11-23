@@ -15,16 +15,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        java_version: ['8', '11', '16']
+        java_version: ['8', '11', '16', '17']
+        java_distribution: ['temurin', 'zulu', 'adopt', 'adopt-openj9']
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 11
+    - name: Set up JDK ${{ matrix.java_version }}
       uses: actions/setup-java@v2
       with:
         java-version: ${{ matrix.java_version }}
-        distribution: 'adopt'
+        distribution: ${{ matrix.java_distribution }}
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
