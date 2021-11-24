@@ -23,7 +23,7 @@ public class Check {
             {
                 continue;
             }
-            if(method.getAnnotation(Expect.class).expect().equals(""))
+            if(method.getReturnType().equals(Void.TYPE))
             {
                 JastTest jastTest = new JastTest().setMethod(method).setName(method.getName());
                 ret.add(jastTest);
