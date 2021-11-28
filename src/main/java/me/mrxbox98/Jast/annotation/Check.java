@@ -34,7 +34,7 @@ public class Check {
                 ret.add(jastTest);
             }
         }
-        return ret;
+        return ret.tests.size()==0 ? null : ret;
     }
 
 }

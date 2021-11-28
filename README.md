@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/29240392/138798545-210a25cb-ad78-41be-a0a3-e3086e1390eb.png) 
 # Jast
-[![Release](https://jitpack.io/v/me.mrxbox98/Jast.svg)](https://jitpack.io/#me.mrxbox98/Jast)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrxbox98%2FJast.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrxbox98%2FJast?ref=badge_shield)
-
+[![Release](https://jitpack.io/v/me.mrxbox98/Jast.svg)](https://jitpack.io/#me.mrxbox98/Jast)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrxbox98%2FJast.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrxbox98%2FJast?ref=badge_shield)
 [![CodeFactor](https://www.codefactor.io/repository/github/mrxbox98/jast/badge/main)](https://www.codefactor.io/repository/github/mrxbox98/jast/overview/main)
 ***
 ```xml
@@ -9,7 +9,7 @@
     <dependency>
         <groupId>me.mrxbox98.Jast</groupId>
         <artifactId>jast</artifactId>
-        <version>1.4.2</version>
+        <version>1.4.3</version>
     </dependency>
 </depedencies>
 ```

@@ -20,13 +20,13 @@
 -docencoding
 'UTF-8'
 -doctitle
-'jast 1.4.2 API'
+'jast 1.4.3 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/saahi/Documents/Github/Jast/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'jast 1.4.2 API'
+'jast 1.4.3 API'
 me.mrxbox98.Jast.annotation
 me.mrxbox98.Jast.core
 me.mrxbox98.Jast.file
@@ -37,16 +37,16 @@ me.mrxbox98.Jast.file
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/file/FileLoad.java'
 C:\Users\saahi\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar = 1636252513371
 C:\Users\saahi\Documents\Github\Jast\src\main\java = 1636782465008
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1637801358961
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1637801358961
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1637801358910
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1637801358959
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1637801358967
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1637801358957
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1637801358963
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1637801358869
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1637801358965
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1637801358950
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1637801358866
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1637801358968
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1638137170795
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1638137170796
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1638137170729
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1638137170793
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1638137170803
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1638137170791
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1638137170797
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1638137170707
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1638137170799
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1638137170785
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1638137170684
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1638137170804
 C:\Users\saahi\Documents\Github\Jast\target\apidocs\stylesheet.css = 1636782465049

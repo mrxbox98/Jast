@@ -15,6 +15,6 @@ public @interface Expect {
      * Gets the expected value in JSON form
      * @return the expected values
      */
-    public String expect() default "";
+    String expect() default "";
 
 }
