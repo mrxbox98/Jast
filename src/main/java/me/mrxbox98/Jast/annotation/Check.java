@@ -1,6 +1,5 @@
 package me.mrxbox98.Jast.annotation;
 
-import com.google.gson.Gson;
 import me.mrxbox98.Jast.core.JastTest;
 import me.mrxbox98.Jast.core.MassTest;
 
@@ -25,12 +24,12 @@ public class Check {
             }
             if(method.getReturnType().equals(Void.TYPE))
             {
-                JastTest jastTest = new JastTest().setMethod(method).setName(method.getName());
+                JastTest jastTest = new JastTest().setMethod(method);
                 ret.add(jastTest);
             }
             else
             {
-                JastTest jastTest = new JastTest().setMethod(method).setName(method.getName()).setExpected(new Gson().fromJson(method.getAnnotation(Expect.class).expect(),method.getReturnType()));
+                JastTest jastTest = new JastTest().setMethod(method).setExpected(JastTest.GSON.fromJson(method.getAnnotation(Expect.class).expect(),method.getReturnType()));
                 ret.add(jastTest);
             }
         }

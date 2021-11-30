@@ -5,56 +5,49 @@ import com.google.gson.Gson;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Optional;
 
 public class JastTest {
 
     /**
+     * Shares GSON
+     */
+    public static final Gson GSON = new Gson();
+
+    /**
      * Method to call
      */
-    Method method;
+    private Method method;
 
     /**
      * Expected values
      */
-    Object[] expected;
+    private Optional<Object[]> expected = Optional.empty();
 
     /**
      * Description of the test
      */
-    String description;
+    private Optional<String> description = Optional.empty();
 
     /**
      * Parameters to call the method with
      */
-    Object[] parameters;
+    private Optional<Object[]> parameters = Optional.empty();
 
     /**
      * The caller of the method - Not required for static methods
      */
-    Object caller;
-
-    /**
-     * The name of the method
-     */
-    String name;
+    private Optional<Object> caller = Optional.empty();
 
     /**
      * How long the method should take
      */
-    long time;
+    private Optional<Long> time = Optional.empty();
 
     /**
      * Check for strictly equals instead of Object#equals(Object obj)
      */
     boolean strictEquals;
-
-    /**
-     * Creates a new JastTest
-     */
-    public JastTest()
-    {
-
-    }
 
     /**
      * Sets the expected values
@@ -63,7 +56,7 @@ public class JastTest {
      */
     public JastTest setExpected(Object... expected)
     {
-        this.expected=expected;
+        this.expected=Optional.of(expected);
         return this;
     }
 
@@ -74,18 +67,7 @@ public class JastTest {
      */
     public JastTest setDescription(String description)
     {
-        this.description=description;
-        return this;
-    }
-
-    /**
-     * Sets the test's name
-     * @param name the name of the test
-     * @return the current object for chaining
-     */
-    public JastTest setName(String name)
-    {
-        this.name=name;
+        this.description=Optional.of(description);
         return this;
     }
 
@@ -96,7 +78,7 @@ public class JastTest {
      */
     public JastTest setParameters(Object... params)
     {
-        this.parameters=params;
+        this.parameters=Optional.of(params);
         return this;
     }
 
@@ -107,7 +89,7 @@ public class JastTest {
      */
     public JastTest setCaller(Object caller)
     {
-        this.caller=caller;
+        this.caller=Optional.of(caller);
         return this;
     }
 
@@ -129,7 +111,7 @@ public class JastTest {
      */
     public JastTest setTime(long time)
     {
-        this.time=time;
+        this.time=Optional.of(time);
         return this;
     }
 
@@ -160,64 +142,18 @@ public class JastTest {
      */
     public boolean test(boolean print)
     {
+        return testError(print);
+    }
+
+    /**
+     * Wrapper for the method test that checks for errors
+     * @param print whether the test should print
+     * @return true if the test passes; false otherwise
+     */
+    public boolean testError(boolean print)
+    {
         try {
-            long currentTime = System.currentTimeMillis();
-
-            Object ret = method.invoke(caller, parameters);
-
-            long diff = System.currentTimeMillis()-currentTime;
-
-            if(ret==null && expected.length==0)
-            {
-                if(print)
-                {
-
-                    printPass();
-                    pass("Expected "+ Arrays.toString(expected) + " and got null ("+diff+"ms)");
-                    printMethod();
-                }
-                return true;
-            }
-
-            for(Object e: expected)
-            {
-                if((strictEquals && e==ret) || (!strictEquals && e.equals(ret)))
-                {
-                    if(diff>time)
-                    {
-                        if(print)
-                        {
-                            printFail();
-                            fail("Took too long ("+diff+"ms)");
-                            printMethod();
-                        }
-                        return false;
-                    }
-
-                    if(print)
-                    {
-
-                        printPass();
-                        pass("Expected "+ Arrays.toString(expected) + " and got "+ ret + " ("+diff+"ms)");
-                        printMethod();
-                    }
-                    return true;
-                }
-            }
-            if(print)
-            {
-                printFail();
-                if(expected.length==0)
-                {
-                    fail("No expected values, but return type was not null");
-                }
-                else
-                {
-                    fail("Got "+ret+" but expected "+ Arrays.toString(expected));
-                }
-                printMethod();
-            }
-            return false;
+            return testMethod(print);
         }
         catch (IllegalAccessException e)
         {
@@ -231,7 +167,7 @@ public class JastTest {
         }
         catch (InvocationTargetException e)
         {
-            for(Object exception: expected)
+            for(Object exception: expected.get())
             {
                 if(exception.getClass().equals(e.getCause().getClass()))
                 {
@@ -249,7 +185,7 @@ public class JastTest {
                 fail("UNEXPECTED ERROR");
                 for(int i=0;i<e.getCause().getStackTrace().length;i++)
                 {
-                   fail(e.getCause().getStackTrace()[i].toString());
+                    fail(e.getCause().getStackTrace()[i].toString());
                 }
                 printMethod();
             }
@@ -257,9 +193,77 @@ public class JastTest {
         }
         catch (Exception ignored)
         {
-
+            ignored.printStackTrace();
         }
+        return false;
+    }
 
+    /**
+     * Tests the Method
+     * @param print whether the method should print
+     * @return true if the test passes; false otherwise
+     * @throws Exception any exception that might be thrown
+     */
+    public boolean testMethod(boolean print) throws Exception
+    {
+        long currentTime = System.currentTimeMillis();
+
+        Object ret = method.invoke(caller.orElse(null), parameters.orElseGet(() -> new Object[]{}));
+
+        long diff = System.currentTimeMillis()-currentTime;
+
+        if(ret==null && !expected.isPresent())
+        {
+            if(print)
+            {
+
+                printPass();
+                pass("Expected no return and got nothing ("+diff+"ms)");
+                printMethod();
+            }
+            return true;
+        }
+        if(!expected.isPresent())
+        {
+            if(print)
+            {
+                printFail();
+                fail("No expected values, but returned value was not null");
+                printMethod();
+            }
+            return false;
+        }
+        for(Object e: expected.get())
+        {
+            if((strictEquals && e==ret) || (!strictEquals && e.equals(ret)))
+            {
+                if(time.isPresent() && diff>time.get())
+                {
+                    if(print)
+                    {
+                        printFail();
+                        fail("Took too long ("+diff+"ms)");
+                        printMethod();
+                    }
+                    return false;
+                }
+
+                if(print)
+                {
+
+                    printPass();
+                    pass("Expected "+ Arrays.toString(expected.get()) + " and got "+ ret + " ("+diff+"ms)");
+                    printMethod();
+                }
+                return true;
+            }
+        }
+        if(print)
+        {
+            printFail();
+            fail("Got "+ret+" but expected "+ Arrays.toString(expected.get()));
+            printMethod();
+        }
         return false;
     }
 
@@ -288,8 +292,7 @@ public class JastTest {
     public void printMethod()
     {
         System.out.println(method.getName());
-        System.out.println(name);
-        System.out.println(description);
+        System.out.println(description.orElse(null));
     }
 
     /**
@@ -318,7 +321,7 @@ public class JastTest {
     @Override
     public String toString()
     {
-        return new Gson().toJson(this);
+        return GSON.toJson(this);
     }
 
 }

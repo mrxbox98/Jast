@@ -9,7 +9,7 @@
     <dependency>
         <groupId>me.mrxbox98.Jast</groupId>
         <artifactId>jast</artifactId>
-        <version>1.4.3</version>
+        <version>2.0.0</version>
     </dependency>
 </depedencies>
 ```
