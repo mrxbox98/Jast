@@ -193,7 +193,7 @@ public class JastTest {
         }
         catch (Exception ignored)
         {
-            ignored.printStackTrace();
+            
         }
         return false;
     }
