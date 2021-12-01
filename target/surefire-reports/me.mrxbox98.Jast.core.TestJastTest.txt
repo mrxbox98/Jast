@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: me.mrxbox98.Jast.core.TestJastTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in me.mrxbox98.Jast.core.TestJastTest
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec

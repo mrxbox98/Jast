@@ -1,6 +1,8 @@
 package me.mrxbox98.Jast.core;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -12,41 +14,48 @@ public class JastTest {
     /**
      * Shares GSON
      */
-    public static final Gson GSON = new Gson();
+    public static final Gson GSON = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 
     /**
      * Method to call
      */
+    @Expose
     private Method method;
 
     /**
      * Expected values
      */
+    @Expose
     private Optional<Object[]> expected = Optional.empty();
 
     /**
      * Description of the test
      */
+    @Expose
     private Optional<String> description = Optional.empty();
 
     /**
      * Parameters to call the method with
      */
+    @Expose
     private Optional<Object[]> parameters = Optional.empty();
 
     /**
      * The caller of the method - Not required for static methods
      */
+    @Expose
     private Optional<Object> caller = Optional.empty();
 
     /**
      * How long the method should take
      */
+    @Expose
     private Optional<Long> time = Optional.empty();
 
     /**
      * Check for strictly equals instead of Object#equals(Object obj)
      */
+    @Expose
     boolean strictEquals;
 
     /**
