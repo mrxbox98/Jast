@@ -1,5 +1,6 @@
 package me.mrxbox98.Jast.annotation;
 
+import me.mrxbox98.Jast.Static;
 import me.mrxbox98.Jast.core.JastTest;
 import me.mrxbox98.Jast.core.MassTest;
 
@@ -12,7 +13,7 @@ public class Check {
      * @param c the class
      * @return the massTest with all of the methods tests
      */
-    public static MassTest checkClass(Class c)
+    public static MassTest checkClass(Class<?> c)
     {
         MassTest ret = new MassTest();
 
@@ -29,7 +30,7 @@ public class Check {
             }
             else
             {
-                JastTest jastTest = new JastTest().setMethod(method).setExpected(JastTest.GSON.fromJson(method.getAnnotation(Expect.class).expect(),method.getReturnType()));
+                JastTest jastTest = new JastTest().setMethod(method).setExpected(Static.GSON.fromJson(method.getAnnotation(Expect.class).expect(),method.getReturnType()));
                 ret.add(jastTest);
             }
         }

@@ -1,26 +1,25 @@
 package me.mrxbox98.Jast.core;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
+import com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException;
+import me.mrxbox98.Jast.Static;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Optional;
 
+/**
+ * @author Mrxbox98
+ */
 public class JastTest {
 
-    /**
-     * Shares GSON
-     */
-    public static final Gson GSON = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+
 
     /**
      * Method to call
      */
-    @Expose
-    private Method method;
+    private JastMethod method;
 
     /**
      * Expected values
@@ -109,7 +108,7 @@ public class JastTest {
      */
     public JastTest setMethod(Method method)
     {
-        this.method=method;
+        this.method=new JastMethod(method);
         return this;
     }
 
@@ -200,9 +199,22 @@ public class JastTest {
             }
             return false;
         }
+        catch (WrongNumberArgsException e)
+        {
+            if(print)
+            {
+                printFail();
+                fail("WRONG NUMBER OF PARAMETERS");
+                for(int i=0;i<e.getStackTrace().length;i++)
+                {
+                    fail(e.getStackTrace()[i].toString());
+                }
+                printMethod();
+            }
+        }
         catch (Exception ignored)
         {
-            
+
         }
         return false;
     }
@@ -217,7 +229,7 @@ public class JastTest {
     {
         long currentTime = System.currentTimeMillis();
 
-        Object ret = method.invoke(caller.orElse(null), parameters.orElseGet(() -> new Object[]{}));
+        Object ret = method.getMethod().invoke(caller.orElse(null), parameters.orElseGet(() -> new Object[]{}));
 
         long diff = System.currentTimeMillis()-currentTime;
 
@@ -300,7 +312,11 @@ public class JastTest {
 
     public void printMethod()
     {
-        System.out.println(method.getName());
+        try {
+            System.out.println(method.getMethod().getName());
+        } catch (ClassNotFoundException | NoSuchMethodException e) {
+            e.printStackTrace();
+        }
         System.out.println(description.orElse(null));
     }
 
@@ -330,7 +346,7 @@ public class JastTest {
     @Override
     public String toString()
     {
-        return GSON.toJson(this);
+        return Static.GSON.toJson(this);
     }
 
 }

@@ -9,7 +9,7 @@
     <dependency>
         <groupId>me.mrxbox98.Jast</groupId>
         <artifactId>jast</artifactId>
-        <version>2.0.1</version>
+        <version>2.1.0</version>
     </dependency>
 </depedencies>
 ```
@@ -26,7 +26,7 @@
 A fast testing utility for Java based off of Jest for Javascript
 
 ```java
-import me.mrxbox98.Jast.core.JastTest;
+import me.mrxbox98.Jast.core.JastTestTests;
 
 public class Test {
     public static void main(String[] args) {
@@ -56,7 +56,7 @@ public class Test {
 ## Chaining
 Jast supports chaining so you can write an entire test in one line.
 ```java
-import me.mrxbox98.Jast.core.JastTest;
+import me.mrxbox98.Jast.core.JastTestTests;
 
 public class Test {
     public static void main(String[] args) {
@@ -73,7 +73,7 @@ public class Test {
 ## Mass Testing
 You call add multiple tests to a mass test in order to tests multiple methods at a time.
 ```java
-import me.mrxbox98.Jast.core.JastTest;
+import me.mrxbox98.Jast.core.JastTestTests;
 import me.mrxbox98.Jast.core.MassTest;
 
 public class Test {
@@ -127,7 +127,7 @@ public class Test {
 
 ## Error Testing
 ```java
-import me.mrxbox98.Jast.core.JastTest;
+import me.mrxbox98.Jast.core.JastTestTests;
 import me.mrxbox98.Jast.core.MassTest;
 
 public class ByteTest {
