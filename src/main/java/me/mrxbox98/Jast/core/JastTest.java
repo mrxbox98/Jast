@@ -212,9 +212,15 @@ public class JastTest {
                 printMethod();
             }
         }
-        catch (Exception ignored)
+        catch (Exception e)
         {
-
+            printFail();
+            fail("UNEXPECTED ERROR OCCURRED");
+            for(int i=0;i<e.getStackTrace().length;i++)
+            {
+                fail(e.getStackTrace()[i].toString());
+            }
+            fail("REPORT THIS AT https://github.com/mrxbox98/Jast/issues");
         }
         return false;
     }
