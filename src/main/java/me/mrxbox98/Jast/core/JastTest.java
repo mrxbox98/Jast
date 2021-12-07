@@ -239,8 +239,18 @@ public class JastTest {
 
         long diff = System.currentTimeMillis()-currentTime;
 
-        if(ret==null && !expected.isPresent())
+        if(method.getMethod().getReturnType().equals(Void.TYPE) && !expected.isPresent())
         {
+            if(time.isPresent() && diff>time.get())
+            {
+                if(print)
+                {
+                    printFail();
+                    fail("Took too long ("+diff+"ms)");
+                    printMethod();
+                }
+                return false;
+            }
             if(print)
             {
 
@@ -252,10 +262,20 @@ public class JastTest {
         }
         if(!expected.isPresent())
         {
+            if(time.isPresent() && diff>time.get())
+            {
+                if(print)
+                {
+                    printFail();
+                    fail("Took too long ("+diff+"ms)");
+                    printMethod();
+                }
+                return false;
+            }
             if(print)
             {
                 printFail();
-                fail("No expected values, but returned value was not null");
+                fail("No expected values, but got "+ret+" ("+diff+"ms)");
                 printMethod();
             }
             return false;
