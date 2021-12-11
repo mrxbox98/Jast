@@ -5,7 +5,7 @@ public class Expect {
     /**
      * The actual value.
      */
-    Class<?> actual;
+    Object actual;
 
     /**
      * The opposite of the actual value.
@@ -21,12 +21,13 @@ public class Expect {
      * Creates a new Expect instance.
      * @param actual The actual value.
      */
-    public Expect(Class<?> actual) {
+    public Expect(Object actual) {
         this.actual = actual;
     }
 
     /**
      * Flips the expect instance.
+     * @return The opposite of the expect instance.
      */
     public Expect not()
     {
@@ -39,7 +40,7 @@ public class Expect {
      * @param expected The expected value.
      * @return true if the actual value is equal to the expected value. Otherwise, false.
      */
-    public boolean toBe(Class<?> expected)
+    public boolean toBe(Object expected)
     {
         return notCheck != (actual == expected);
     }
@@ -49,7 +50,7 @@ public class Expect {
      * @param expected The expected value.
      * @return true if the actual value is equal to the expected value. Otherwise, false.
      */
-    public boolean toEqual(Class<?> expected)
+    public boolean toEqual(Object expected)
     {
         return notCheck != (actual.equals(expected));
     }
@@ -108,6 +109,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThan(int value)
     {
         try
@@ -168,6 +174,18 @@ public class Expect {
         }
     }
 
+    public boolean toBeLessThan(float value)
+    {
+        try
+        {
+            return notCheck != (Float.parseFloat(String.valueOf(actual))<value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
     public boolean toBeLessThanOrEqual(double value)
     {
         try
@@ -185,6 +203,18 @@ public class Expect {
         try
         {
             return notCheck != (Integer.parseInt(String.valueOf(actual))<=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThanOrEqual(float value)
+    {
+        try
+        {
+            return notCheck != (Float.parseFloat(String.valueOf(actual))<=value);
         }
         catch (NumberFormatException e)
         {
@@ -217,4 +247,22 @@ public class Expect {
             return false;
         }
     }
+
+    public boolean toBeCloseTo(float value)
+    {
+        try
+        {
+            return notCheck != (Math.abs(Float.parseFloat(String.valueOf(actual))-value)<Float.MIN_NORMAL);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toMatch(String regex)
+    {
+        return notCheck != ((String)actual).matches(regex);
+    }
+
 }
