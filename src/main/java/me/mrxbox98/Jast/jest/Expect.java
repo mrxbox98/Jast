@@ -82,11 +82,19 @@ public class Expect {
         return notCheck != (actual == null);
     }
 
+    /**
+     * Checks if the value is truthy.
+     * @return true if so. Otherwise, false.
+     */
     public boolean toBeTruthy()
     {
         return notCheck == (actual == null);
     }
 
+    /**
+     * Checks if the value is falsy.
+     * @return true if so. Otherwise, false.
+     */
     public boolean toBeFalsy()
     {
         return notCheck != (actual == null);
@@ -126,6 +134,54 @@ public class Expect {
         }
     }
 
+    public boolean toBeGreaterThan(float value)
+    {
+        try
+        {
+            return notCheck != (Float.parseFloat(String.valueOf(actual))>value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThan(long value)
+    {
+        try
+        {
+            return notCheck != (Long.parseLong(String.valueOf(actual))>value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThan(short value)
+    {
+        try
+        {
+            return notCheck != (Short.parseShort(String.valueOf(actual))>value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThan(byte value)
+    {
+        try
+        {
+            return notCheck != (Byte.parseByte(String.valueOf(actual))>value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
     public boolean toBeGreaterThanOrEqual(double value)
     {
         try
@@ -143,6 +199,54 @@ public class Expect {
         try
         {
             return notCheck != (Integer.parseInt(String.valueOf(actual))>=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThanOrEqual(float value)
+    {
+        try
+        {
+            return notCheck != (Float.parseFloat(String.valueOf(actual))>=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThanOrEqual(long value)
+    {
+        try
+        {
+            return notCheck != (Long.parseLong(String.valueOf(actual))>=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThanOrEqual(short value)
+    {
+        try
+        {
+            return notCheck != (Short.parseShort(String.valueOf(actual))>=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeGreaterThanOrEqual(byte value)
+    {
+        try
+        {
+            return notCheck != (Byte.parseByte(String.valueOf(actual))>=value);
         }
         catch (NumberFormatException e)
         {
@@ -186,6 +290,42 @@ public class Expect {
         }
     }
 
+    public boolean toBeLessThan(long value)
+    {
+        try
+        {
+            return notCheck != (Long.parseLong(String.valueOf(actual))<value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThan(short value)
+    {
+        try
+        {
+            return notCheck != (Short.parseShort(String.valueOf(actual))<value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThan(byte value)
+    {
+        try
+        {
+            return notCheck != (Byte.parseByte(String.valueOf(actual))<value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
     public boolean toBeLessThanOrEqual(double value)
     {
         try
@@ -215,6 +355,42 @@ public class Expect {
         try
         {
             return notCheck != (Float.parseFloat(String.valueOf(actual))<=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThanOrEqual(long value)
+    {
+        try
+        {
+            return notCheck != (Long.parseLong(String.valueOf(actual))<=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThanOrEqual(short value)
+    {
+        try
+        {
+            return notCheck != (Short.parseShort(String.valueOf(actual))<=value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeLessThanOrEqual(byte value)
+    {
+        try
+        {
+            return notCheck != (Byte.parseByte(String.valueOf(actual))<=value);
         }
         catch (NumberFormatException e)
         {
@@ -253,6 +429,42 @@ public class Expect {
         try
         {
             return notCheck != (Math.abs(Float.parseFloat(String.valueOf(actual))-value)<Float.MIN_NORMAL);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeCloseTo(long value)
+    {
+        try
+        {
+            return notCheck != (Long.parseLong(String.valueOf(actual))==value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeCloseTo(short value)
+    {
+        try
+        {
+            return notCheck != (Short.parseShort(String.valueOf(actual))==value);
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean toBeCloseTo(byte value)
+    {
+        try
+        {
+            return notCheck != (Byte.parseByte(String.valueOf(actual))==value);
         }
         catch (NumberFormatException e)
         {
