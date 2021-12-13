@@ -134,6 +134,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThan(float value)
     {
         try
@@ -146,6 +151,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThan(long value)
     {
         try
@@ -158,6 +168,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThan(short value)
     {
         try
@@ -170,6 +185,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThan(byte value)
     {
         try
@@ -182,6 +202,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(double value)
     {
         try
@@ -194,6 +219,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(int value)
     {
         try
@@ -206,6 +236,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(float value)
     {
         try
@@ -218,6 +253,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(long value)
     {
         try
@@ -230,6 +270,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(short value)
     {
         try
@@ -242,6 +287,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is greater than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is greater than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeGreaterThanOrEqual(byte value)
     {
         try
@@ -254,6 +304,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(double value)
     {
         try
@@ -266,6 +321,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(int value)
     {
         try
@@ -278,6 +338,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(float value)
     {
         try
@@ -290,6 +355,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(long value)
     {
         try
@@ -302,6 +372,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(short value)
     {
         try
@@ -314,6 +389,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThan(byte value)
     {
         try
@@ -326,6 +406,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(double value)
     {
         try
@@ -338,6 +423,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(int value)
     {
         try
@@ -350,6 +440,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(float value)
     {
         try
@@ -362,6 +457,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(long value)
     {
         try
@@ -374,6 +474,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(short value)
     {
         try
@@ -386,6 +491,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is less than or equal to the supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is less than or equal to the supplied value. Otherwise, false.
+     */
     public boolean toBeLessThanOrEqual(byte value)
     {
         try
@@ -398,6 +508,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(double value)
     {
         try
@@ -412,6 +527,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(int value)
     {
         try
@@ -424,6 +544,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(float value)
     {
         try
@@ -436,6 +561,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(long value)
     {
         try
@@ -448,6 +578,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(short value)
     {
         try
@@ -460,6 +595,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the actual value is close to supplied value.
+     * @param value The value to compare to.
+     * @return true if the actual value is close to the supplied value. Otherwise, false.
+     */
     public boolean toBeCloseTo(byte value)
     {
         try
@@ -472,6 +612,11 @@ public class Expect {
         }
     }
 
+    /**
+     * Checks if the String matches the supplied regular expression.
+     * @param regex The regular expression to match.
+     * @return true if the String matches the supplied regular expression. Otherwise, false.
+     */
     public boolean toMatch(String regex)
     {
         return notCheck != ((String)actual).matches(regex);
