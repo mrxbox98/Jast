@@ -1,10 +1,12 @@
 package me.mrxbox98.Jast.jest;
 
+import java.util.function.Consumer;
+
 public class Jest {
 
-    public static Data test(String description, Test test)
+    public static Data test(String description, Consumer test)
     {
-        boolean pass = test.test();
+        boolean pass = false;
         if(pass)
         {
             System.out.println("\u001b[32;1m✓\u001b[0m " + description);
@@ -16,9 +18,9 @@ public class Jest {
         return new Data(description, pass);
     }
 
-    public static void describe(String description, Describe test)
+    public static void describe(String description, Consumer test)
     {
-        Data[] passes = test.describe();
+        Data[] passes = null;
 
         for(Data pass: passes)
         {

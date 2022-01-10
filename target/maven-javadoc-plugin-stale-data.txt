@@ -12,7 +12,7 @@
 'C:/Users/saahi/Documents/Github/Jast/src/main/java'
 -author
 -bottom
-'Copyright &#169; 2021. All rights reserved.'
+'Copyright &#169; 2022. All rights reserved.'
 -charset
 'UTF-8'
 -d
@@ -30,6 +30,7 @@
 me.mrxbox98.Jast.annotation
 me.mrxbox98.Jast.core
 me.mrxbox98.Jast.file
+me.mrxbox98.Jast.jest
 me.mrxbox98.Jast
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/annotation/Check.java'
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/annotation/Expect.java'
@@ -37,19 +38,22 @@ me.mrxbox98.Jast
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/core/JastTest.java'
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/core/MassTest.java'
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/file/FileLoad.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Data.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Expect.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Jest.java'
 'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/Static.java'
 C:\Users\saahi\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar = 1636252513371
 C:\Users\saahi\Documents\Github\Jast\src\main\java = 1636782465008
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1639019286853
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1639019286854
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1639019286797
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1639019286852
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1639019286858
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1639019286850
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1639019286855
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1639019286769
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1639019286857
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1639019286846
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1639019286767
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1639019286859
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1641848722703
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1641848722705
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1641848722599
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1641848722701
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1641848722713
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1641848722697
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1641848722706
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1641848722551
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1641848722709
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1641848722681
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1641848722548
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1641848722714
 C:\Users\saahi\Documents\Github\Jast\target\apidocs\stylesheet.css = 1636782465049
