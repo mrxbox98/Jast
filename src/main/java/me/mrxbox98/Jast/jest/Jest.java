@@ -18,15 +18,18 @@ public class Jest {
 
     public static void describe(String description, Describe test)
     {
-        Data pass = test.describe();
+        Data[] passes = test.describe();
 
-        if(pass.isSuccess())
+        for(Data pass: passes)
         {
-            System.out.println("\u001b[32;1m[PASS]\u001b[0m " + description);
-        }
-        else
-        {
-            System.out.println("\u001b[31;1m[FAIL]\u001b[0m " + description);
+            if(pass.isSuccess())
+            {
+                System.out.println("\u001b[32;1m[PASS]\u001b[0m " + description);
+            }
+            else
+            {
+                System.out.println("\u001b[31;1m[FAIL]\u001b[0m " + description);
+            }
         }
     }
 
