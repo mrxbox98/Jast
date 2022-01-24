@@ -20,40 +20,40 @@
 -docencoding
 'UTF-8'
 -doctitle
-'jast 2.1.1 API'
+'Jast 2.1.2 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/saahi/Documents/Github/Jast/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'jast 2.1.1 API'
-me.mrxbox98.Jast.annotation
-me.mrxbox98.Jast.core
-me.mrxbox98.Jast.file
-me.mrxbox98.Jast.jest
-me.mrxbox98.Jast
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/annotation/Check.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/annotation/Expect.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/core/JastMethod.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/core/JastTest.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/core/MassTest.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/file/FileLoad.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Data.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Expect.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/jest/Jest.java'
-'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/Jast/Static.java'
+'Jast 2.1.2 API'
+me.mrxbox98.jast.annotation
+me.mrxbox98.jast.core
+me.mrxbox98.jast.file
+me.mrxbox98.jast.jest
+me.mrxbox98.jast
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/annotation/Check.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/annotation/Expect.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/core/JastMethod.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/core/JastTest.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/core/MassTest.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/file/FileLoad.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/jest/Data.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/jest/Expect.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/jest/Jest.java'
+'C:/Users/saahi/Documents/Github/Jast/src/main/java/me/mrxbox98/jast/Static.java'
 C:\Users\saahi\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar = 1636252513371
 C:\Users\saahi\Documents\Github\Jast\src\main\java = 1636782465008
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1641848722703
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1641848722705
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1641848722599
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1641848722701
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1641848722713
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1641848722697
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1641848722706
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1641848722551
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1641848722709
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1641848722681
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1641848722548
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1641848722714
-C:\Users\saahi\Documents\Github\Jast\target\apidocs\stylesheet.css = 1636782465049
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-frame.html = 1643058340606
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\allclasses-noframe.html = 1643058340610
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\constant-values.html = 1643058340498
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\deprecated-list.html = 1643058340606
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\help-doc.html = 1643058340614
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index-all.html = 1643058340602
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\index.html = 1643058340610
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-frame.html = 1643058340430
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-summary.html = 1643058340610
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\overview-tree.html = 1643058340586
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\package-list = 1643058340426
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\script.js = 1643058340618
+C:\Users\saahi\Documents\Github\Jast\target\apidocs\stylesheet.css = 1643058340618

@@ -1,0 +1,86 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.mrxbox98.jast</groupId>
+    <artifactId>jast</artifactId>
+    <version>2.1.2</version>
+    <name>Jast</name>
+    <description>A Java testing tool based off of Jest</description>
+    <url>https://github.com/mrxbox98/Jast</url>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/mrxbox98/Jast/blob/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>Mrxbox98</id>
+            <name>Mrxbox98</name>
+            <email>cannonyourhouse@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:mrxbox98/Jast.git</connection>
+        <developerConnection>scm:git:ssh://github.com:mrxbox98/Jast.git</developerConnection>
+        <url>https://github.com/mrxbox98/Jast/tree/main</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub mrxbox98 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/mrxbox98/Jast</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+    </dependencies>
+</project>
