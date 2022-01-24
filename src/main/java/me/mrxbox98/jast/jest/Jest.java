@@ -1,4 +1,4 @@
-package me.mrxbox98.Jast.jest;
+package me.mrxbox98.jast.jest;
 
 import java.util.function.Consumer;
 

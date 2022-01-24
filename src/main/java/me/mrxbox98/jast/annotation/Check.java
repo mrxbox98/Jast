@@ -1,8 +1,8 @@
-package me.mrxbox98.Jast.annotation;
+package me.mrxbox98.jast.annotation;
 
-import me.mrxbox98.Jast.Static;
-import me.mrxbox98.Jast.core.JastTest;
-import me.mrxbox98.Jast.core.MassTest;
+import me.mrxbox98.jast.Static;
+import me.mrxbox98.jast.core.JastTest;
+import me.mrxbox98.jast.core.MassTest;
 
 import java.lang.reflect.Method;
 

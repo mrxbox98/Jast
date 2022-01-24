@@ -1,4 +1,4 @@
-package me.mrxbox98.Jast;
+package me.mrxbox98.jast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

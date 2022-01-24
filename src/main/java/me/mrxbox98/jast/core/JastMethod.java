@@ -1,4 +1,4 @@
-package me.mrxbox98.Jast.core;
+package me.mrxbox98.jast.core;
 
 import java.lang.reflect.Method;
 

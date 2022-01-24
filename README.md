@@ -4,12 +4,13 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrxbox98%2FJast.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrxbox98%2FJast?ref=badge_shield)
 [![CodeFactor](https://www.codefactor.io/repository/github/mrxbox98/jast/badge/main)](https://www.codefactor.io/repository/github/mrxbox98/jast/overview/main)
 ***
+
 ```xml
 <depedencies>
     <dependency>
-        <groupId>me.mrxbox98.Jast</groupId>
+        <groupId>me.mrxbox98.jast</groupId>
         <artifactId>jast</artifactId>
-        <version>2.1.1</version>
+        <version>2.1.2</version>
     </dependency>
 </depedencies>
 ```
@@ -26,7 +27,7 @@
 A fast testing utility for Java based off of Jest for Javascript
 
 ```java
-import me.mrxbox98.Jast.core.JastTestTests;
+import me.mrxbox98.jast.core.JastTestTests;
 
 public class Test {
     public static void main(String[] args) {
@@ -55,8 +56,9 @@ public class Test {
 
 ## Chaining
 Jast supports chaining so you can write an entire test in one line.
+
 ```java
-import me.mrxbox98.Jast.core.JastTestTests;
+import me.mrxbox98.jast.core.JastTestTests;
 
 public class Test {
     public static void main(String[] args) {
@@ -72,9 +74,10 @@ public class Test {
 
 ## Mass Testing
 You call add multiple tests to a mass test in order to tests multiple methods at a time.
+
 ```java
-import me.mrxbox98.Jast.core.JastTestTests;
-import me.mrxbox98.Jast.core.MassTest;
+import me.mrxbox98.jast.core.JastTestTests;
+import me.mrxbox98.jast.core.MassTest;
 
 public class Test {
 
@@ -126,9 +129,10 @@ public class Test {
 ![image](https://user-images.githubusercontent.com/29240392/138393589-3d9f2fb6-cd46-48e9-ba6f-68f6271955f3.png)
 
 ## Error Testing
+
 ```java
-import me.mrxbox98.Jast.core.JastTestTests;
-import me.mrxbox98.Jast.core.MassTest;
+import me.mrxbox98.jast.core.JastTestTests;
+import me.mrxbox98.jast.core.MassTest;
 
 public class ByteTest {
     public static void main(String[] args)

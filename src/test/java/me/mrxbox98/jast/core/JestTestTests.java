@@ -1,6 +1,6 @@
-package me.mrxbox98.Jast.core;
+package me.mrxbox98.jast.core;
 
-import static me.mrxbox98.Jast.jest.Jest.*;
+import static me.mrxbox98.jast.jest.Jest.*;
 
 public class JestTestTests {
 

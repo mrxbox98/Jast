@@ -1,4 +1,4 @@
-package me.mrxbox98.Jast.jest;
+package me.mrxbox98.jast.jest;
 
 public class Data {
 

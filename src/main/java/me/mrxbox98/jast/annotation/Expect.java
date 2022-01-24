@@ -1,4 +1,4 @@
-package me.mrxbox98.Jast.annotation;
+package me.mrxbox98.jast.annotation;
 
 
 import java.lang.annotation.ElementType;

@@ -1,8 +1,8 @@
-package me.mrxbox98.Jast.core;
+package me.mrxbox98.jast.core;
 
 import com.google.gson.annotations.Expose;
 import com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException;
-import me.mrxbox98.Jast.Static;
+import me.mrxbox98.jast.Static;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -366,7 +366,7 @@ public class JastTest {
 
     /**
      * Converts this test into a string that can be read by FileLoad
-     * @see me.mrxbox98.Jast.file.FileLoad
+     * @see me.mrxbox98.jast.file.FileLoad
      * @return the JSON version of this test
      */
     @Override

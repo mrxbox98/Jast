@@ -1,7 +1,7 @@
-package me.mrxbox98.Jast.file;
+package me.mrxbox98.jast.file;
 
 import com.google.gson.Gson;
-import me.mrxbox98.Jast.core.JastTest;
+import me.mrxbox98.jast.core.JastTest;
 
 import java.io.*;
 

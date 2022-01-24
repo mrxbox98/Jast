@@ -1,9 +1,12 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.mrxbox98.Jast</groupId>
+    <groupId>me.mrxbox98.jast</groupId>
     <artifactId>jast</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
+    <name>Jast</name>
+    <description>A Java testing tool based off of Jest</description>
+    <url>https://github.com/mrxbox98/Jast</url>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
