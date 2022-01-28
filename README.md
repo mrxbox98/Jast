@@ -1,10 +1,9 @@
 ![image](https://user-images.githubusercontent.com/29240392/138798545-210a25cb-ad78-41be-a0a3-e3086e1390eb.png) 
 # Jast
-[![Release](https://jitpack.io/v/me.mrxbox98/Jast.svg)](https://jitpack.io/#me.mrxbox98/Jast)
+[![Maven Central](https://img.shields.io/maven-central/v/me.mrxbox98.jast/jast.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22me.mrxbox98.jast%22%20AND%20a:%22jast%22)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrxbox98%2FJast.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrxbox98%2FJast?ref=badge_shield)
 [![CodeFactor](https://www.codefactor.io/repository/github/mrxbox98/jast/badge/main)](https://www.codefactor.io/repository/github/mrxbox98/jast/overview/main)
 ***
-
 ```xml
 <depedencies>
     <dependency>
@@ -13,15 +12,6 @@
         <version>2.1.2</version>
     </dependency>
 </depedencies>
-```
-***
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
 ```
 ***
 A fast testing utility for Java based off of Jest for Javascript
